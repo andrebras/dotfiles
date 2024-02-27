@@ -5,3 +5,15 @@
 [".config/alacritty/themes/atom-one-light.toml"]
   type = "file"
   url = "https://raw.githubusercontent.com/alacritty/alacritty-theme/master/themes/atom_one_light.toml"
+
+[".config/alacritty/themes/rose-pine-dawn.toml"]
+  type = "file"
+  url = "https://raw.githubusercontent.com/rose-pine/alacritty/main/dist/rose-pine-dawn.toml"
+
+[".config/alacritty/themes/rose-pine-moon.toml"]
+  type = "file"
+  url = "https://raw.githubusercontent.com/rose-pine/alacritty/main/dist/rose-pine-moon.toml"
+
+[".config/alacritty/themes/rose-pine.toml"]
+  type = "file"
+  url = "https://raw.githubusercontent.com/rose-pine/alacritty/main/dist/rose-pine.toml"
