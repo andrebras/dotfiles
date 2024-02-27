@@ -1,3 +1,7 @@
 [".zgen"]
   type = "git-repo"
   url = "https://github.com/tarjoilija/zgen.git"
+
+[".config/alacritty/themes/atom-one-light.toml"]
+  type = "file"
+  url = "https://raw.githubusercontent.com/alacritty/alacritty-theme/master/themes/atom_one_light.toml"
