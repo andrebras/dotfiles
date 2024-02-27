@@ -9,6 +9,7 @@
   safecrlf = true
   editor = vim
   quotepath = false
+  pager = diff-so-fancy | less --tabs=4 -RF
   ; commentchar = !
   ; editor = code --new-window --disable-extensions --wait
 
@@ -77,3 +78,6 @@
 [maintenance]
   repo = /Users/andrebras/Lab/revolution
   repo = /Users/andrebras/Lab/dpworx
+
+[interactive]
+  diffFilter = diff-so-fancy --patch

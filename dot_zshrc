@@ -53,6 +53,11 @@ if ! zgen saved; then
   zgen prezto '*' color 'yes'
   zgen prezto prompt theme 'powerlevel10k'
 
+  zgen prezto 'terminal:window-title' 'yes'
+  zgen prezto 'git:log:oneline' format '_git_log_oneline_format'
+  zgen prezto 'git:log:brief'   format '_git_log_brief_format'
+  zgen prezto 'ssh:load' identities 'id_rsa' 'id_github'
+
   zgen prezto
 
   zgen prezto terminal
@@ -68,11 +73,6 @@ if ! zgen saved; then
   zgen prezto osx
   zgen prezto gpg
   zgen prezto ssh
-
-  zgen prezto 'terminal:window-title' 'yes'
-  zgen prezto 'git:log:oneline' format '_git_log_oneline_format'
-  zgen prezto 'git:log:brief'   format '_git_log_brief_format'
-  zgen prezto 'ssh:load' identities 'id_rsa' 'id_github'
 
   zgen save
 fi
@@ -94,11 +94,11 @@ fi
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+# asdf
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
+
 # homebrew
 eval $(/opt/homebrew/bin/brew shellenv)
 
 # Hook direnv into zsh
 eval "$(direnv hook zsh)"
-
-# asdf
-. /opt/homebrew/opt/asdf/libexec/asdf.sh
