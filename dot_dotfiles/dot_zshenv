@@ -1,0 +1,21 @@
+export GPG_TTY=$(tty)
+
+# add .local/bin to path
+export PATH=/Users/andrebras/.local/bin:$PATH
+
+# invoke escripts by name
+export PATH=$PATH:$HOME/.mix/escripts
+
+# used as preview for fzf
+export BAT_THEME=ansi
+
+# disable rails spring
+export DISABLE_SPRING=true
+
+# postgresql through libpq
+export PATH=/opt/homebrew/opt/libpq/bin:$PATH
+
+# mysql client
+export PATH=/opt/homebrew/opt/mysql-client@5.7/bin:$PATH
+export LDFLAGS=-L/opt/homebrew/opt/mysql-client@5.7/lib
+export CPPFLAGS=-I/opt/homebrew/opt/mysql-client@5.7/include
