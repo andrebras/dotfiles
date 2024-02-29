@@ -3,6 +3,10 @@ import = [
   "~/.config/alacritty/fonts.toml",
 ]
 
+[shell]
+program = "/opt/homebrew/bin/fish"
+# args = ["--login"]
+
 [colors]
 draw_bold_text_with_bright_colors = false
 
