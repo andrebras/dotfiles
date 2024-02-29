@@ -45,7 +45,7 @@ syntax on " turn syntax highlighting on by default
 "
 " shell
 "
-set shell=/bin/zsh
+set shell=/opt/homebrew/bin/fish
 
 set encoding=utf-8 " set default encoding to UTF-8
 set scrolloff=3    " keep 3 lines when scrolling
