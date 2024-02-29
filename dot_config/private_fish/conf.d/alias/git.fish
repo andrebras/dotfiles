@@ -13,7 +13,8 @@ alias gco 'git checkout'
 
 # Log
 alias glg "git log --color=always --topo-order --all --graph --pretty=format:'$git_log_brief_format'"
-alias glo "git log --max-count=25 --color=always --pretty=format:'$git_log_oneline_format'"
+alias glo "git log --color=always --topo-order --pretty=format:'$git_log_oneline_format'"
+alias gll "glo --max-count=25"
 
 # Working Copy
 alias gss 'git status --short'

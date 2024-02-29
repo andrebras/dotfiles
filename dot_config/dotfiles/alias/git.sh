@@ -1,3 +1,7 @@
+# Git Log Formats
+_git_log_oneline_format='%C(green)%h%C(reset) %C(blue bold)(%ar by %an) %C(reset)%s %C(bold black)%d%C(reset)'
+_git_log_brief_format='%C(green)%h%C(reset) %s%C(red)%d%C(reset)%n'
+
 # Git
 alias g='git'
 
