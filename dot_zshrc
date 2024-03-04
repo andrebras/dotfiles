@@ -93,11 +93,9 @@ eval $(/opt/homebrew/bin/brew shellenv)
 eval "$(direnv hook zsh)"
 
 # Source all files inside zsh folder
-zshrc="$HOME/.zshrc"
+dotfiles="$HOME/.config/dotfiles/alias"
 
-if [[ -a "${zshrc}" ]]; then
-  dotfiles="$HOME/.config/dotfiles/alias"
-
+if [[ -a "${dotfiles}" ]]; then
   for file in ${dotfiles}/**; do
     source "$file"
   done
