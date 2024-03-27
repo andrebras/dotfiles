@@ -50,6 +50,8 @@ source "${HOME}/.zgen/zgen.zsh"
 if ! zgen saved; then
   echo "Creating a zgen save"
 
+  zgen prezto
+
   zgen prezto '*' color 'yes'
   zgen prezto prompt theme 'powerlevel10k'
 
@@ -58,21 +60,18 @@ if ! zgen saved; then
   zgen prezto 'git:log:brief'   format '_git_log_brief_format'
   zgen prezto 'ssh:load' identities 'id_rsa' 'id_github'
 
-  zgen prezto
-
-  zgen prezto terminal
-  zgen prezto git
-  zgen prezto ruby
-  zgen prezto utility
+  zgen prezto autosuggestions
   zgen prezto command-not-found
   zgen prezto completion
-  zgen prezto syntax-highlighting
-  zgen prezto history-substring-search
-  zgen prezto autosuggestions
-
-  zgen prezto osx
+  zgen prezto git
   zgen prezto gpg
+  zgen prezto history-substring-search
+  zgen prezto osx
+  zgen prezto ruby
   zgen prezto ssh
+  zgen prezto syntax-highlighting
+  zgen prezto terminal
+  zgen prezto utility
 
   zgen save
 fi
