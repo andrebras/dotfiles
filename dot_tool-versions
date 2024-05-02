@@ -1,6 +1,6 @@
 rust 1.69.0
 nodejs 18.16.0
 ruby 3.2.1
-python 3.9.16
-elixir 1.15
+python 3.9.2
+elixir 1.16.1-otp-26
 erlang 26.0.1
