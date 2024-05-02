@@ -1,5 +1,5 @@
 import = [
-  "~/.config/alacritty/themes/one-light.toml",
+  "~/.config/alacritty/themes/atom-one-light.toml",
   "~/.config/alacritty/fonts.toml",
 ]
 
