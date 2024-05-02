@@ -1,0 +1,10 @@
+[default]
+sso_session = publitas-dev
+sso_account_id = 990647075493
+sso_role_name = DevAccess
+region = eu-west-1
+
+[sso-session publitas-dev]
+sso_region = eu-west-1
+sso_start_url = https://d-936744e326.awsapps.com/start
+sso_registration_scopes = sso:account:access
