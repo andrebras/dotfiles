@@ -2,6 +2,16 @@
 
 This repository contains my personal dotfiles managed by [chezmoi](https://www.chezmoi.io/). Chezmoi helps you manage your personal configuration files across multiple machines.
 
+## Table of Contents
+
+- [What's Inside?](#whats-inside)
+- [Structure](#structure)
+- [Installation](#installation)
+  - [Setting Up a New Computer](#setting-up-a-new-computer)
+  - [Useful Chezmoi Commands](#useful-chezmoi-commands)
+- [Security](#security)
+  - [Encrypting Files with Chezmoi](#encrypting-files-with-chezmoi)
+
 ## What's Inside?
 
 - **Shell Configurations**: Configurations for Zsh and Bash.
@@ -13,17 +23,6 @@ This repository contains my personal dotfiles managed by [chezmoi](https://www.c
 - **AWS**: AWS CLI configuration files.
 - **Ansible**: Ansible configurations for provisioning and automation.
 - **ASDF**: Version manager configurations for managing multiple runtime versions.
-
-## Structure
-
-- `.chezmoiexternal.toml`: External resources managed by chezmoi.
-- `dot_aws/`: AWS CLI configurations.
-- `dot_ssh/`: SSH client configurations and keys.
-- `private_dot_gnupg/`: Encrypted GPG configuration files.
-- `Brewfile`: Homebrew dependencies and applications.
-- `dot_ansible.cfg`: Ansible configurations.
-- `dot_asdfrc`: Version management configurations.
-- `dot_vimrc`, `dot_tmux.conf`, `dot_zshrc`, etc.: Various tool configurations.
 
 ## Installation
 
