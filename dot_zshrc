@@ -95,10 +95,10 @@ eval "$(direnv hook zsh)"
 eval "$(zoxide init zsh)"
 
 # Source all files inside zsh folder
-dotfiles="$HOME/.config/dotfiles/alias"
+alias="$HOME/.config/alias"
 
-if [[ -a "${dotfiles}" ]]; then
-  for file in ${dotfiles}/**; do
+if [[ -a "${alias}" ]]; then
+  for file in ${alias}/**; do
     source "$file"
   done
 fi
