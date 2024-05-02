@@ -31,3 +31,6 @@ eval (/opt/homebrew/bin/brew shellenv)
 
 # Hook direnv into Fish shell
 eval (direnv hook fish)
+
+# Zoxide
+zoxide init fish | source

@@ -91,6 +91,9 @@ eval $(/opt/homebrew/bin/brew shellenv)
 # Hook direnv into zsh
 eval "$(direnv hook zsh)"
 
+# Zoxide
+eval "$(zoxide init zsh)"
+
 # Source all files inside zsh folder
 dotfiles="$HOME/.config/dotfiles/alias"
 
