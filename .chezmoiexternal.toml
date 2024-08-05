@@ -6,6 +6,14 @@ url = "https://github.com/tarjoilija/zgen.git"
 type = "file"
 url = "https://raw.githubusercontent.com/alacritty/alacritty-theme/master/themes/atom_one_light.toml"
 
+[".config/alacritty/themes/tokyo-night.toml"]
+type = "file"
+url = "https://raw.githubusercontent.com/alacritty/alacritty-theme/master/themes/tokyo-night.toml"
+
+[".config/alacritty/themes/tokyo-night-storm.toml"]
+type = "file"
+url = "https://raw.githubusercontent.com/alacritty/alacritty-theme/master/themes/tokyo-night-storm.toml"
+
 [".config/alacritty/themes/rose-pine-dawn.toml"]
 type = "file"
 url = "https://raw.githubusercontent.com/rose-pine/alacritty/main/dist/rose-pine-dawn.toml"
@@ -17,3 +25,7 @@ url = "https://raw.githubusercontent.com/rose-pine/alacritty/main/dist/rose-pine
 [".config/alacritty/themes/rose-pine.toml"]
 type = "file"
 url = "https://raw.githubusercontent.com/rose-pine/alacritty/main/dist/rose-pine.toml"
+
+[".config/alacritty/themes/dracula.toml"]
+type = "file"
+url = "https://raw.githubusercontent.com/dracula/alacritty/master/dracula.toml"
