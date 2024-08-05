@@ -40,40 +40,45 @@ path=(
 )
 
 #
-# ZGen
+# zgenom
 #
 
-# Load zgen
-source "${HOME}/.zgen/zgen.zsh"
+# Load zgenom
+source "${HOME}/.zgenom/zgenom.zsh"
 
-# Create zgen init script
-if ! zgen saved; then
-  echo "Creating a zgen save"
+# Check for plugin and zgenom updates every 7 days
+zgenom autoupdate
 
-  zgen prezto
+# Create zgenom init script
+if ! zgenom saved; then
+  echo "Creating a zgenom save"
 
-  zgen prezto '*' color 'yes'
-  zgen prezto prompt theme 'powerlevel10k'
+  # prezto options
+  zgenom prezto '*' color 'yes'
+  zgenom prezto 'terminal:window-title' 'yes'
+  zgenom prezto prompt theme 'powerlevel10k'
 
-  zgen prezto 'terminal:window-title' 'yes'
-  zgen prezto 'git:log:oneline' format '_git_log_oneline_format'
-  zgen prezto 'git:log:brief'   format '_git_log_brief_format'
-  zgen prezto 'ssh:load' identities 'id_rsa' 'id_github'
+  zgenom prezto 'git:log:oneline' format '_git_log_oneline_format'
+  zgenom prezto 'git:log:brief'   format '_git_log_brief_format'
+  zgenom prezto 'ssh:load' identities 'id_rsa' 'id_github'
 
-  zgen prezto autosuggestions
-  zgen prezto command-not-found
-  zgen prezto completion
-  zgen prezto git
-  zgen prezto gpg
-  zgen prezto history-substring-search
-  zgen prezto osx
-  zgen prezto ruby
-  zgen prezto ssh
-  zgen prezto syntax-highlighting
-  zgen prezto terminal
-  zgen prezto utility
+  # prezto and modules
+  zgenom prezto
+  zgenom prezto autosuggestions
+  zgenom prezto command-not-found
+  zgenom prezto completion
+  zgenom prezto git
+  zgenom prezto gpg
+  zgenom prezto history-substring-search
+  zgenom prezto osx
+  zgenom prezto ruby
+  zgenom prezto ssh
+  zgenom prezto syntax-highlighting
+  zgenom prezto terminal
+  zgenom prezto utility
 
-  zgen save
+  # create init script
+  zgenom save
 fi
 
 # Incremental search with ctr + r
@@ -81,18 +86,6 @@ fi
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-# asdf
-. /opt/homebrew/opt/asdf/libexec/asdf.sh
-
-# homebrew
-eval $(/opt/homebrew/bin/brew shellenv)
-
-# Hook direnv into zsh
-eval "$(direnv hook zsh)"
-
-# Zoxide
-eval "$(zoxide init zsh)"
 
 # Source all files inside zsh folder
 alias="$HOME/.config/alias"
@@ -102,3 +95,15 @@ if [[ -a "${alias}" ]]; then
     source "$file"
   done
 fi
+
+# asdf
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
+
+# homebrew
+eval $(/opt/homebrew/bin/brew shellenv)
+
+# Zoxide
+eval "$(zoxide init zsh)"
+
+# Hook direnv into zsh
+eval "$(direnv hook zsh)"
