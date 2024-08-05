@@ -24,6 +24,7 @@ Plug 'tpope/vim-surround'
 
 " themes
 Plug 'rose-pine/vim'
+Plug 'dracula/vim', { 'name': 'dracula' }
 
 call plug#end()
 
@@ -150,7 +151,7 @@ set wildignore+=*.swp,*~,._*
 "
 " colors & themes
 "
-colorscheme shine
+colorscheme default
 
 " when on, uses |highlight-guifg| and |highlight-guibg| attributes in the
 " terminal (thus using 24-bit color).
