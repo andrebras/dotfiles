@@ -15,7 +15,7 @@ blinking = "On"
 shape = "Block"
 
 [env]
-TERM = "xterm-256color"
+TERM = "screen-256color"
 
 [mouse]
 hide_when_typing = false
