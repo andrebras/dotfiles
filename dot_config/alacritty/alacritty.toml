@@ -29,3 +29,4 @@ decorations_theme_variant = "None"
 dynamic_title = true
 startup_mode = "Maximized"
 opacity = 0.98
+title = "Terminal"
