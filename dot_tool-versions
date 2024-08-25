@@ -4,3 +4,5 @@ ruby 3.2.1
 python 3.9.2
 elixir 1.16.1-otp-26
 erlang 26.0.1
+java openjdk-17.0.2
+maven 3.8.4
