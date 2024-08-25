@@ -3,6 +3,9 @@ export GPG_TTY=$(tty)
 # add .local/bin to path
 export PATH=/Users/andrebras/.local/bin:$PATH
 
+# add openjdk to local path
+# export PATH=/opt/homebrew/opt/openjdk/bin:$PATH
+
 # invoke escripts by name
 export PATH=$PATH:$HOME/.mix/escripts
 
@@ -19,3 +22,6 @@ export PATH=/opt/homebrew/opt/libpq/bin:$PATH
 export PATH=/opt/homebrew/opt/mysql-client@5.7/bin:$PATH
 export LDFLAGS=-L/opt/homebrew/opt/mysql-client@5.7/lib
 export CPPFLAGS=-I/opt/homebrew/opt/mysql-client@5.7/include
+
+# publitas
+export PREVIEW_EMAIL=true
