@@ -12,13 +12,13 @@ alias gb "git for-each-ref --count=15 --sort=-committerdate refs/heads/ --format
 alias gco 'git checkout'
 
 # Log
-alias glg "git log --color=always --topo-order --all --graph --pretty=format:'$git_log_brief_format'"
-alias glo "git log --color=always --topo-order --pretty=format:'$git_log_oneline_format'"
-alias gll "glo --max-count=25"
+alias glg "git log --color=always --topo-order --all --graph --pretty=format:\"$git_log_brief_format\""
+alias glo "git log --color=always --topo-order --pretty=format:\"$git_log_oneline_format\""
+alias gll "git log --color=always --topo-order --pretty=format:\"$git_log_oneline_format\" -n25"
 
 # Working Copy
-alias gss 'git status --short'
-alias gws 'git status'
+alias gss "git status --ignore-submodules=\$_git_status_ignore_submodules --short"
+alias gws "git status --ignore-submodules=\$_git_status_ignore_submodules"
 
 # Remove the alias 'gs' if it exists
 functions -e gs

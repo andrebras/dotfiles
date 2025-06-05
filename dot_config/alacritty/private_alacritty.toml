@@ -1,11 +1,14 @@
+[general]
 import = [
   "~/.config/alacritty/themes/tokyo-night-storm.toml",
   "~/.config/alacritty/fonts.toml",
 ]
 
-# [shell]
-# program = "/opt/homebrew/bin/fish"
-# # args = ["--login"]
+# [terminal.shell]
+# For a smooth transition, we can use the login switch to load legacy files like
+# .profile during fish startup. Not required!
+# args = ["--login"]
+# program = "/bin/zsh"
 
 [colors]
 draw_bold_text_with_bright_colors = false

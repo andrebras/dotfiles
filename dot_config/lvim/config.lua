@@ -35,7 +35,7 @@ lvim.builtin.bufferline.options.color_icons = true
 lvim.builtin.bufferline.options.show_tab_indicators = false
 
 -- Nvimtree
-lvim.builtin.nvimtree.setup.view.side = "right"
+lvim.builtin.nvimtree.setup.view.side = "left"
 lvim.builtin.nvimtree.setup.view.width = 40
 lvim.builtin.nvimtree.setup.renderer.icons.show.git = false
 lvim.builtin.nvimtree.setup.renderer.icons.webdev_colors = true
@@ -107,22 +107,25 @@ lvim.builtin.telescope = {
   },
 }
 
--- -- Trouble
--- -- Use which-key to add extra bindings with the leader-key prefix
--- lvim.builtin.which_key.mappings["t"] = {
---   name = "+Trouble",
---   r = { "<cmd>Trouble lsp_references<cr>", "References" },
---   f = { "<cmd>Trouble lsp_definitions<cr>", "Definitions" },
---   d = { "<cmd>Trouble document_diagnostics<cr>", "Diagnostics" },
---   q = { "<cmd>Trouble quickfix<cr>", "QuickFix" },
---   l = { "<cmd>Trouble loclist<cr>", "LocationList" },
---   w = { "<cmd>Trouble workspace_diagnostics<cr>", "Workspace Diagnostics" },
--- }
+-- Language Servers
+-- Disable automatic installation
+lvim.lsp.automatic_servers_installation = false
 
--- Use asdf solargraph
--- configure a server manually. !!Requires `:LvimCacheReset` to take effect!!
-require("lvim.lsp.manager").setup("solargraph", {
-  cmd = { "/Users/andrebras/.asdf/shims/solargraph", "stdio" }
+-- Skip LSP server Solargraph, doesn't work unless we skip it in the beginning
+-- otherwise it gets installed automatically!!
+vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, { "solargraph" })
+
+-- Configure a server manually requires `:LvimCacheReset` to take effect!!
+-- Ruby LSP
+require("lvim.lsp.manager").setup("ruby_lsp", {
+  cmd = { "ruby-lsp" },
+  filetypes = { "ruby" },
+  root_dir = require("lspconfig").util.root_pattern("Gemfile", ".git"),
+  settings = {
+    ruby = {
+      formatting = true,
+    }
+  }
 })
 
 -- Additional Plugins
@@ -149,14 +152,19 @@ lvim.plugins = {
       require("tidy").setup()
     end
   },
+  {
+    "folke/trouble.nvim",
+    opts = {}, -- for default options, refer to the configuration section for custom setup.
+    cmd = "Trouble",
+  },
 
   -- themes --
-  {
-    "folke/tokyonight.nvim",
-    lazy = false,
-    priority = 1000,
-    opts = {},
-  },
+  -- {
+  --   "folke/tokyonight.nvim",
+  --   lazy = false,
+  --   priority = 1000,
+  --   opts = {},
+  -- },
   -- { 'Mofiqul/vscode.nvim' },
   -- { 'rose-pine/neovim' },
   -- { "Mofiqul/dracula.nvim" },

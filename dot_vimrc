@@ -22,9 +22,9 @@ Plug 'tpope/vim-surround'
 " Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 " Plug 'junegunn/fzf.vim'
 
-" themes
-Plug 'rose-pine/vim'
-Plug 'dracula/vim', { 'name': 'dracula' }
+"" themes
+"Plug 'rose-pine/vim'
+"Plug 'dracula/vim', { 'name': 'dracula' }
 
 call plug#end()
 
@@ -42,12 +42,11 @@ let &t_SI = "\e[6 q" " insert, steady bar (xterm)
 "
 syntax on " turn syntax highlighting on by default
 
-
 "
 " shell
 "
-" set shell=/opt/homebrew/bin/fish
-set shell=/bin/zsh
+" set shell=/bin/zsh
+set shell=/opt/homebrew/bin/fish
 
 set encoding=utf-8 " set default encoding to UTF-8
 set scrolloff=3    " keep 3 lines when scrolling
@@ -151,7 +150,7 @@ set wildignore+=*.swp,*~,._*
 "
 " colors & themes
 "
-colorscheme default
+colorscheme delek
 
 " when on, uses |highlight-guifg| and |highlight-guibg| attributes in the
 " terminal (thus using 24-bit color).

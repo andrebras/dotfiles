@@ -81,3 +81,7 @@
 
 [interactive]
   diffFilter = diff-so-fancy --patch
+
+[alias]
+  switchback = switch -
+  sb = switchback

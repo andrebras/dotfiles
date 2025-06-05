@@ -1,24 +1,27 @@
-# Set GPG_TTY variable to the current terminal
 set -x GPG_TTY (tty)
 
-# Add .local/bin to the beginning of the PATH
+# add .local/bin to path
 set -x PATH /Users/andrebras/.local/bin $PATH
 
-# Add ~/.mix/escripts to the PATH
+# add openjdk to local path
+# set -x PATH /opt/homebrew/opt/openjdk/bin $PATH
+
+# invoke escripts by name
 set -x PATH $HOME/.mix/escripts $PATH
 
-# Set BAT_THEME variable for bat
+# used as preview for fzf
 set -x BAT_THEME ansi
 
-# Disable Rails spring
+# disable rails spring
 set -x DISABLE_SPRING true
 
-# Add libpq/bin to the PATH for PostgreSQL
+# postgresql through libpq
 set -x PATH /opt/homebrew/opt/libpq/bin $PATH
 
-# Add mysql-client@5.7/bin to the PATH for MySQL client
-set -x PATH /opt/homebrew/opt/mysql-client@5.7/bin $PATH
+# mysql client
+# set -x PATH /opt/homebrew/opt/mysql-client@5.7/bin $PATH
+# set -x LDFLAGS -L/opt/homebrew/opt/mysql-client@5.7/lib
+# set -x CPPFLAGS -I/opt/homebrew/opt/mysql-client@5.7/include
 
-# Set LDFLAGS and CPPFLAGS for mysql-client@5.7
-set -x LDFLAGS -L/opt/homebrew/opt/mysql-client@5.7/lib
-set -x CPPFLAGS -I/opt/homebrew/opt/mysql-client@5.7/include
+# publitas
+set -x PREVIEW_EMAIL true
