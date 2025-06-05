@@ -1,7 +1,3 @@
-tap 'homebrew/bundle'
-tap 'homebrew/cask-fonts'
-tap 'homebrew/services'
-
 cask_args appdir: '/Applications'
 
 brew 'ack'
