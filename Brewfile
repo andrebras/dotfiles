@@ -30,7 +30,9 @@ brew 'tldr'
 brew 'tmux'
 brew 'tree'
 brew 'v8'
-brew 'vault'
+# vault has been disabled because it will change its license to BUSL on the next
+# release! It was disabled on 2024-09-27
+# brew 'vault'
 brew 'vim'
 brew 'wget'
 brew 'yarn'
