@@ -2,9 +2,9 @@
 type = "git-repo"
 url = "https://github.com/tarjoilija/zgen.git"
 
-[".config/alacritty/themes/atom-one-light.toml"]
+[".config/alacritty/themes/one_light.toml"]
 type = "file"
-url = "https://raw.githubusercontent.com/alacritty/alacritty-theme/master/themes/atom_one_light.toml"
+url = "https://raw.githubusercontent.com/alacritty/alacritty-theme/refs/heads/master/themes/one_light.toml"
 
 [".config/alacritty/themes/tokyo-night.toml"]
 type = "file"
